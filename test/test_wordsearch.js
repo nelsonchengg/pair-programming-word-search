@@ -35,4 +35,27 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is not present", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'B', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'E', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'N', 'U', 'A', 'L'],
+      ['H', 'M', 'J', 'T', 'J', 'V', 'R', 'G'],
+      ['W', 'H', 'C', 'S', 'A', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'M', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'I', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'N', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'BENJAMIN')
+
+    assert.isTrue(result);
+  });
+
+  it("should return undefined if the array is empty", function() {
+    const result = wordSearch([
+    ], 'BENJAMIN')
+    
+assert.isUndefined(result);
+  });
 });
